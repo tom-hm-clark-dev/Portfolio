@@ -1,0 +1,71 @@
+import wordpressLogo from '../assets/wordpress.svg';
+import shopifyLogo from '../assets/shopify.svg';
+import wixLogo from '../assets/wix.svg';
+
+const projects = [
+    {
+        slug:"andira-ltd",
+        platform:wordpressLogo,
+        title:"Andira Ltd",
+        excerpt:"This is a brief description",
+        url:"https://andira.madmdev.co.uk/"        
+    },
+    {
+        slug:"creative-gym",
+        platform:wixLogo,
+        title:"Creative Gym 2.0",
+        excerpt:"This is a brief description",
+        url:"https://www.startcreativegym.com/"
+    },
+    {
+        slug:"multi-connect",
+        platform:wordpressLogo,
+        title:"Multi-Connect",
+        excerpt:"This is a brief description",
+        url:"https://multi-connect.co.uk/"
+    },
+    {
+        slug:"really-hair-extensions",
+        platform:shopifyLogo,
+        title:"Really Hair Extensions",
+        excerpt:"This is a brief description",
+        url:"https://reallyhairextensions.com/"
+    },
+    {
+        slug:"start-digital",
+        platform:wordpressLogo,
+        title:"Start Digital",
+        excerpt:"This is a brief description",
+        url:"https://startdigitaltraining.com/"
+    },
+    {
+        slug:"green-world-spa-products",
+        platform:shopifyLogo,
+        title:"Green World Spa Products",
+        excerpt:"This is a brief description",
+        url:"https://greenworldspaproducts.co.uk/"
+    },
+    {
+        slug:"westby-group-ltd",
+        platform:wordpressLogo,
+        title:"Westby Group Ltd",
+        excerpt:"This is a brief description",
+        url:"https://westbygroup.madmdev.co.uk/"
+    },
+    {
+        slug:"mind-balance-center",
+        platform:wordpressLogo,
+        title:"Mind Balance Center",
+        excerpt:"This is a brief description",
+        url:"https://mindbalancecenter.co.uk/"
+    },
+    {
+        slug:"apex-print-design",
+        platform:wordpressLogo,
+        title:"Apex Print & Design",
+        excerpt: "This is a brief description",
+        url:"https://apexprintanddesign.madmdev.co.uk/"
+    }
+]
+
+export default projects;
