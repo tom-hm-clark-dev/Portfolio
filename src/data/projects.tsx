@@ -10,6 +10,7 @@ const projects = [
         title:"Andira Ltd",
         excerpt:"This is a brief description",
         url:"https://andira.madmdev.co.uk/",
+        hero:AndiraHero,
         images: [
             AndiraHero
         ],        

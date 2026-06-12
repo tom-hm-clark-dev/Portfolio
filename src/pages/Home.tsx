@@ -4,10 +4,12 @@ import Section from '../components/Section';
 import Row from '../components/Row'
 import Col from '../components/Col'
 import Button from '../components/Button'
+import Navbar from '../components/Navbar';
 
 export function Home() {
   return (
     <>
+      <Navbar />
       <Section 
       id="hero"
       bg="dark">
@@ -27,6 +29,7 @@ export function Home() {
       bg="light">
           <Row>
             <Col>
+            <h2>Some of my past work</h2>
               <div className='projects-grid'>
                 {projects.map(project => <ProjectCard 
                 key={project.slug}

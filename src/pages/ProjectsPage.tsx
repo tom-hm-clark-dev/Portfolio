@@ -3,10 +3,12 @@ import Row from '../components/Row'
 import Col from '../components/Col'
 import ProjectCard from '../components/ProjectCard'
 import projects from '../data/projects'
+import Navbar from '../components/Navbar'
 
 export function ProjectsPage() {
   return (
     <>
+    <Navbar />
       <Section
       id="hero"
       bg="dark">

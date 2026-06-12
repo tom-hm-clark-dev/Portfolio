@@ -6,7 +6,8 @@ type ProjectCardProps = {
     title: string;
     excerpt: string;
     url: string;
-    images?: string[];
+    hero?: string;
+
 }
 
 export function ProjectCard( props: ProjectCardProps ) {
@@ -14,8 +15,8 @@ export function ProjectCard( props: ProjectCardProps ) {
         <Link to={`/project/${props.slug}`}>
             <div className="project-card"
             style={{
-            background: props.images?.[0] ?
-            `url(${props.images[0]})`
+            background: props.hero ?
+            `url(${props.hero})`
             : undefined
             }}>
                 <div className='overlay'></div>

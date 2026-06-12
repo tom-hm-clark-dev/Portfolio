@@ -3,6 +3,7 @@ import projects from "../data/projects";
 import Section from "../components/Section";
 import Row from "../components/Row";
 import Col from "../components/Col";
+import Navbar from "../components/Navbar";
 
 export function ProjectDetailsPage() {
   const {slug} = useParams();
@@ -13,12 +14,13 @@ export function ProjectDetailsPage() {
   }
   return (
     <>
+    <Navbar />
       <Section
       id="hero"
       bg="dark"
       style={{
-        backgroundImage: project.images?.[0] ?
-        `url(${project.images[0]})`
+        backgroundImage: project.hero ?
+        `url(${project.hero})`
         : undefined
       }}>
         <Row>
@@ -31,7 +33,7 @@ export function ProjectDetailsPage() {
       <Section>
         <Row>
           <Col>
-          <p>f</p>
+          <p></p>
           </Col>
         </Row>
       </Section>
