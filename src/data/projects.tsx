@@ -12,7 +12,13 @@ const projects = [
         url:"https://andira.madmdev.co.uk/",
         images: [
             AndiraHero
-        ]        
+        ],        
+        content: [
+            {
+                type:"heading",
+                text:"This is a heading"
+            }
+        ]
     },
     {
         slug:"creative-gym",

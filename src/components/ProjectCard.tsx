@@ -6,19 +6,26 @@ type ProjectCardProps = {
     title: string;
     excerpt: string;
     url: string;
+    images?: string[];
 }
 
 export function ProjectCard( props: ProjectCardProps ) {
     return (
         <Link to={`/project/${props.slug}`}>
-            <div className="project-card">
+            <div className="project-card"
+            style={{
+            background: props.images?.[0] ?
+            `url(${props.images[0]})`
+            : undefined
+            }}>
+                <div className='overlay'></div>
                 <div className="content">
                     <div className="row">
                         <img className="platform-logo" src={props.platform}></img>
                         <h3>{props.title}</h3>
                     </div>
-                    {props.excerpt}
-                    <p>View</p>
+                    <p>{props.excerpt}</p>
+                    <span>View</span>
                 </div>
             </div>
         </Link>
