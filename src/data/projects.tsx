@@ -1,6 +1,7 @@
 import wordpressLogo from '../assets/wordpress.svg';
 import shopifyLogo from '../assets/shopify.svg';
 import wixLogo from '../assets/wix.svg';
+import AndiraHero from '../assets/Hero-1.webp';
 
 const projects = [
     {
@@ -8,7 +9,10 @@ const projects = [
         platform:wordpressLogo,
         title:"Andira Ltd",
         excerpt:"This is a brief description",
-        url:"https://andira.madmdev.co.uk/"        
+        url:"https://andira.madmdev.co.uk/",
+        images: [
+            AndiraHero
+        ]        
     },
     {
         slug:"creative-gym",
