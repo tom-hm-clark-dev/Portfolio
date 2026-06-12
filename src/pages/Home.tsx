@@ -3,6 +3,7 @@ import ProjectCard from '../components/ProjectCard'
 import Section from '../components/Section';
 import Row from '../components/Row'
 import Col from '../components/Col'
+import Button from '../components/Button'
 
 export function Home() {
   return (
@@ -10,11 +11,16 @@ export function Home() {
       <Section 
       id="hero"
       bg="dark">
-        <div className='hero'>
-          <h1>Tom Clark: Front-End Web Developer</h1>
-          <p>Lorem ipsum</p>
-          <a href="#projects">View my work</a>
-        </div>
+        <Row>
+          <Col>
+            <h1>Tom Clark: Front-End Web Developer</h1>
+            <p>Lorem ipsum</p>
+            <Button
+            link="#projects"
+            text="View my work"
+            ></Button>
+          </Col>
+        </Row>
       </Section>
       <Section 
       id="projects"

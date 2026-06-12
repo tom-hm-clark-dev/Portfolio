@@ -1,5 +1,6 @@
 import './App.css'
-import ProjectPage from './pages/ProjectPage'
+import ProjectDetailsPage from './pages/ProjectDetailsPage'
+import ProjectsPage from './pages/ProjectsPage';
 import Home from './pages/Home'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -8,7 +9,8 @@ function App() {
     <>
     <Routes>
       <Route path='/' element={<Home/>} />
-      <Route path='/project/:slug' element={<ProjectPage/>}/>
+      <Route path='/project/:slug' element={<ProjectDetailsPage/>}/>
+      <Route path='/projects' element={<ProjectsPage/>}/>
     </Routes>
       
     </>

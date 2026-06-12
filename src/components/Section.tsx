@@ -8,7 +8,7 @@ type SectionProps = {
 
 export function Section({id, bg, children}: SectionProps) {
   return (
-    <div className={`section section--${bg}`}>
+    <div id={id} className={`section section--${bg}`}>
       {children}
     </div>
   )

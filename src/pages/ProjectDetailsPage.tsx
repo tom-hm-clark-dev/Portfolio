@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom"
 import projects from "../data/projects";
 
-export function Project() {
+export function ProjectDetailsPage() {
   const {slug} = useParams();
   const project = projects.find(p => p.slug === slug);
 
@@ -24,4 +24,4 @@ export function Project() {
   )
 }
 
-export default Project
+export default ProjectDetailsPage
