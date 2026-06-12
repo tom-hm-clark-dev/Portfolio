@@ -4,12 +4,20 @@
     padding: 0;
 }
 
-section {
+.section {
     padding: 3% 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.section--dark {
+    background-color: #29343c;
+}
+
+.section--light {
+    background-color: #f7f7f7;
 }
 
 .row {

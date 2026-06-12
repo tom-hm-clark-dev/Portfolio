@@ -9,13 +9,18 @@ export function Project() {
     return <h1>Project not found</h1>;
   }
   return (
-    <>
-    <h1>{project.title}</h1>
-    <p>{project.excerpt}</p>
-    {project.images?.map((image) => (
-      <img key={project.slug} src={image}></img>
-    ))}
-    </>
+    <section>
+      <div className="row">
+        <div className="col">
+          <h1>{project.title}</h1>
+          <p>{project.excerpt}</p>
+          {project.images?.map((image) => (
+            <img key={project.slug} src={image}></img>
+          ))}
+        </div>
+      </div>
+
+    </section>
   )
 }
 
