@@ -1,6 +1,7 @@
 import wordpressLogo from '../assets/wordpress.svg';
 import shopifyLogo from '../assets/shopify.svg';
 import wixLogo from '../assets/wix.svg';
+import figmaLogo from '../assets/figma.svg'
 import AndiraHero from '../assets/Hero-1.webp';
 
 const projects = [
@@ -14,6 +15,15 @@ const projects = [
         images: [
             AndiraHero
         ],        
+        roles: [
+            "Designer",
+            "Developer",
+            "SEO"
+        ],
+        tech: [
+            figmaLogo,
+            wordpressLogo
+        ],
         content: [
             {
                 type:"heading",

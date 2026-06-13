@@ -7,7 +7,7 @@ type ButtonProps = {
 
 export function Button({ ...props }:ButtonProps) {
   return (
-    <Link to={props.link}>{props.text}</Link>
+    <Link className="btn" to={props.link}>{props.text}</Link>
   )
 }
 

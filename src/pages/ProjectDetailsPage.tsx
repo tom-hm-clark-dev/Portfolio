@@ -27,6 +27,25 @@ export function ProjectDetailsPage() {
           <Col>
             <h1>{project.title}</h1>
             <p>{project.excerpt}</p>
+            <a className="btn" target="_blank" href={project.url}>View live site</a>
+            <div className="project-info-grid">
+              <div className="info-container">
+                <h3>Roles:</h3>
+                <div className="info-row">
+                  {project.roles?.map((role) => (
+                    <span className="tag" key={role}>{role}</span>
+                  ))}
+                  <span></span>
+                </div>
+              </div>
+              <div className="info-container">
+                <h3>Technologies used:</h3>
+                <div className="info-row">
+                  {project.tech?.map((tech) =>
+                  <img key={tech} src={tech} className="platform-logo"></img>)}
+                </div>
+              </div>
+            </div>
           </Col>
         </Row>
       </Section>

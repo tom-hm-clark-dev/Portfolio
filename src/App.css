@@ -35,6 +35,18 @@ h1 {
     font-size: 64px;
 }
 
+.btn {
+    width: fit-content;
+    background: rgba(41, 52, 60, 0.4);
+    color: #f7f7f7;
+    padding: .8em 1em;
+    border-radius: 30px;
+    border: 2px solid #f7f7f7;
+    margin-top: 20px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
 .section {
     padding: 3% 0;
     display: flex;
@@ -59,8 +71,27 @@ h1 {
 }
 
 #hero .row {
-    padding-top: 100px;
     z-index: 1
+}
+
+#hero .row:first-child {
+    padding-top: 100px;
+}
+
+#hero .col {
+    position: relative;
+}
+
+#hero .hero-links-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    gap: 1em;
+}
+
+#hero .hero-links-container a {
+    color: #f7f7f7;
 }
 
 #hero h1 {
@@ -84,6 +115,11 @@ h1 {
     display: flex;
     width: 80%;
     max-width: 1366px;
+}
+
+.row.full-width {
+    width: 100%;
+    max-width: 100%;
 }
 
 @media screen and (min-width: 1921px) {
@@ -126,6 +162,15 @@ h1 {
     background-repeat: no-repeat;
 }
 
+@media screen and (max-width: 991px) {
+    .project-card {
+        width: auto;
+        flex: 0 0 300px;
+        scroll-snap-align: start;
+        border-radius: 0;
+    }
+}
+
 .project-card::before {
     content: "";
     position: absolute;
@@ -166,21 +211,63 @@ h1 {
     color: #fff;
 }
 
-.project-card .row {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 8px;
-}
-
 .project-card .content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
+    display: grid;
+    grid-template-rows: 50px 0fr;
+    overflow: hidden;
 }
 
 .platform-logo {
     width: 24px;
     aspect-ratio: 1/1;
 }
+
+.project-info-grid {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: fit-content;
+    color: #f7f7f7;
+    gap: 2em;
+}
+
+.project-info-grid .info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 1em;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.project-info-grid .info-container .info-row {
+    display: flex;
+    gap: 10px;
+}
+
+.tag {
+    position: relative;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    color: #29343c;
+    background: #f7f7f7;
+    border-radius: 30px;
+    padding: .3em .8em;
+}
+
+.tag::before {
+    content:"";
+    width: 10px;
+    aspect-ratio: 1/1;
+    left: 0;
+    top: 0;
+    background-color: #29343c;
+    border-radius: 50%;
+}
+
