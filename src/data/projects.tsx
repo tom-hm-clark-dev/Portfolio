@@ -3,11 +3,13 @@ import shopifyLogo from '../assets/shopify.svg';
 import wixLogo from '../assets/wix.svg';
 import figmaLogo from '../assets/figma.svg'
 import AndiraHero from '../assets/Hero-1.webp';
+import type { Project } from '../types/types';
 
-const projects = [
+const projects: Project[] = [
     {
         slug:"andira-ltd",
         platform:wordpressLogo,
+        subtitle:"Make A Difference Marketing",
         title:"Andira Ltd",
         excerpt:"This is a brief description",
         url:"https://andira.madmdev.co.uk/",
@@ -24,12 +26,12 @@ const projects = [
             figmaLogo,
             wordpressLogo
         ],
-        content: [
+        content: 
             {
                 type:"heading",
                 text:"This is a heading"
             }
-        ]
+        
     },
     {
         slug:"creative-gym",

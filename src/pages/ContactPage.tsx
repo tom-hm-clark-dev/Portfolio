@@ -13,6 +13,7 @@ export function ContactPage() {
                 <Row>
                     <Col>
                         <h1>Contact Page</h1>
+                        <p>Lorem ipsum</p>
                     </Col>
                 </Row>
             </Section>

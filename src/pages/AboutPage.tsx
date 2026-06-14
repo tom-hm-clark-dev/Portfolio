@@ -13,6 +13,7 @@ export function AboutPage() {
                 <Row>
                     <Col>
                     <h1>About me</h1>
+                    <p>Lorem ipsum</p>
                     </Col>
                 </Row>
             </Section>

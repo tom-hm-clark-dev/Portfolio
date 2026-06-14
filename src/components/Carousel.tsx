@@ -11,7 +11,6 @@ export function Carousel({ children }:CarouselProps) {
             {children}
         </div>
     )
-
 }
 
 export default Carousel
