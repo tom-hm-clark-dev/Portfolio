@@ -1,14 +1,14 @@
 import type { ReactNode } from "react"
 
 type RowProps = {
-  width?:string
+  styles?:string
   children:ReactNode
 }
 
-export function Row( {children, width}:RowProps) {
+export function Row( {...props}:RowProps) {
   return (
-    <div className={`row ${width}`}>
-      { children }
+    <div className={`row ${props.styles}`}>
+      { props.children }
     </div>
   )
 }

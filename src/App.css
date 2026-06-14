@@ -35,6 +35,19 @@ h1 {
     font-size: 64px;
 }
 
+h2 {
+    font-size: 32px;
+}
+
+.heading-subtitle {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+    width: fit-content;
+    padding: 0 1em .7em .3em;
+}
+
 .btn {
     width: fit-content;
     background: rgba(41, 52, 60, 0.4);
@@ -42,7 +55,6 @@ h1 {
     padding: .8em 1em;
     border-radius: 30px;
     border: 2px solid #f7f7f7;
-    margin-top: 20px;
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
 }
@@ -53,6 +65,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -83,9 +96,7 @@ h1 {
 }
 
 #hero .hero-links-container {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    margin-left: auto;
     display: flex;
     gap: 1em;
 }
@@ -113,6 +124,7 @@ h1 {
 
 .row {
     display: flex;
+    align-items: center;
     width: 80%;
     max-width: 1366px;
 }
@@ -120,6 +132,18 @@ h1 {
 .row.full-width {
     width: 100%;
     max-width: 100%;
+}
+
+@media screen and (min-width: 991px)  {
+    .row.carousel {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .row.projects-row {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 1921px) {
@@ -133,12 +157,13 @@ h1 {
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    gap: 20px;
 }
 
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1em;
+    gap: 2em;
 }
 
 @media screen and (min-width: 1921px) {
@@ -147,127 +172,10 @@ h1 {
     }
 }
 
-.project-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    width: 100%;
-    aspect-ratio: 7/8;
-    border-radius: 10px;
-    padding: 1em;
-    position: relative;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-@media screen and (max-width: 991px) {
-    .project-card {
-        width: auto;
-        flex: 0 0 300px;
-        scroll-snap-align: start;
-        border-radius: 0;
-    }
-}
-
-.project-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    background-image: inherit;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: transform .3s ease;
-    border-radius: 10px;
-}
-
-.project-card:hover::before {
-    transform: scale(1.1);
-}
-
-.project-card .overlay {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    inset: 0;
-    background: linear-gradient(0deg, 
-    rgba(17, 17, 17, 0.95) 20%,
-    rgba(17, 17, 17, 0.0));
-    z-index: 0;
-}
-
-.project-card .content {
-    z-index: 1;
-}
-
-.project-card h3,
-.project-card p,
-.project-card span {
-    text-decoration: none;
-    color: #fff;
-}
-
-.project-card .content {
-    display: grid;
-    grid-template-rows: 50px 0fr;
-    overflow: hidden;
-}
-
 .platform-logo {
     width: 24px;
     aspect-ratio: 1/1;
 }
 
-.project-info-grid {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    max-width: fit-content;
-    color: #f7f7f7;
-    gap: 2em;
-}
 
-.project-info-grid .info-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 10px;
-    background-color: rgba(0, 0, 0, 0.4);
-    padding: 1em;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-}
-
-.project-info-grid .info-container .info-row {
-    display: flex;
-    gap: 10px;
-}
-
-.tag {
-    position: relative;
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    color: #29343c;
-    background: #f7f7f7;
-    border-radius: 30px;
-    padding: .3em .8em;
-}
-
-.tag::before {
-    content:"";
-    width: 10px;
-    aspect-ratio: 1/1;
-    left: 0;
-    top: 0;
-    background-color: #29343c;
-    border-radius: 50%;
-}
 

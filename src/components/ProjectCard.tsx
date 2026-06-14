@@ -1,4 +1,5 @@
 import {Link} from 'react-router-dom';
+import './ProjectCard.css'
 
 type ProjectCardProps = {
     slug: string;
@@ -26,7 +27,7 @@ export function ProjectCard( props: ProjectCardProps ) {
                     <img className="platform-logo" src={props.platform}></img>
                     <h3>{props.title}</h3>
                 </div>
-                <div>
+                <div className='hidden'>
                     <p>{props.excerpt}</p>
                     <span>View</span>
                 </div>

@@ -4,6 +4,7 @@ import Section from "../components/Section";
 import Row from "../components/Row";
 import Col from "../components/Col";
 import Navbar from "../components/Navbar";
+import './ProjectsDetailsPage.css'
 
 export function ProjectDetailsPage() {
   const {slug} = useParams();
