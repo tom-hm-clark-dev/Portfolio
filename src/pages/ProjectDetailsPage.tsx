@@ -35,7 +35,11 @@ export function ProjectDetailsPage() {
             <div className="project-info-grid">
               <ProjectInfoCard
               project={project}
-              data={project.tech}></ProjectInfoCard>
+              dataType="tech">
+              </ProjectInfoCard>
+              <ProjectInfoCard
+              project={project}
+              dataType="roles"/>
             </div>
           </Col>
         </Row>
@@ -43,37 +47,16 @@ export function ProjectDetailsPage() {
       <Section>
         <Row>
           <Col>
-          <p></p>
+          {project.content?.map((block, index) => (
+            <div key={index}>
+              {block.type === "heading" && <h2>{block.text}</h2>}
+              {block.type === "body" && <p>{block.text}</p>}
+            </div>
+          ))}
           </Col>
         </Row>
       </Section>
     </>
-  )
-}
-
-export function GetRoles(project:typeof projects[number]) {
-  return (
-    <div className="info-container">
-      <h3>Roles:</h3>
-      <div className="info-row">
-        {project.roles?.map((role) => (
-          <span className="tag" key={role}>{role}</span>
-        ))}
-        <span></span>
-      </div>
-    </div>
-  )
-}
-
-function GetTechnologies(project: typeof projects[number]) {
-  return (
-    <div className="info-container">
-      <h3>Technologies used:</h3>
-      <div className="info-row">
-        {project.tech?.map((tech) =>
-        <img key={tech} src={tech} className="platform-logo"></img>)}
-      </div>
-    </div>
   )
 }
 

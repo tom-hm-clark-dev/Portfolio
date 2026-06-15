@@ -40,7 +40,7 @@
     transform: scale(1.1);
 }
 
-.project-card .overlay {
+.project-card .bg-overlay {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -49,6 +49,30 @@
     rgba(17, 17, 17, 0.7) 20%,
     rgba(17, 17, 17, 0.0));
     z-index: 0;
+    transform: translateY(0);
+    transition: all 0.4s ease;
+}
+
+.project-card:hover .bg-overlay {
+    transform: translateY(100%);
+}
+
+.project-card .hover-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background-color: rgb(22, 22, 174);
+    mix-blend-mode: screen;
+    transition: all 0.4s ease;
+    pointer-events: none;
+    transform: translateY(-100%);
+}
+
+.project-card:hover .hover-overlay {
+    transform: translateY(0);
 }
 
 .project-card .content {
@@ -64,7 +88,7 @@
 
 .project-card .content {
     display: grid;
-    grid-template-rows: 50px 0fr;
+    grid-template-rows: 1fr;
     overflow: hidden;
     transition: all 0.4s ease;
 }
@@ -76,7 +100,7 @@
 }
 
 .project-card:hover .content {
-    grid-template-rows: 50px 1fr;
+    grid-template-rows: 0fr;
 }
 
 .project-card .hidden span {

@@ -19,6 +19,7 @@ export function Home() {
       bg="dark">
         <Row>
           <Col>
+          <span className='heading-subtitle'>Portfolio</span>
             <h1>Tom Clark: Front-End Web Developer</h1>
             <p>Lorem ipsum</p>
           </Col>

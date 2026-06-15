@@ -21,15 +21,14 @@ export function ProjectCard( props: ProjectCardProps ) {
             : undefined
             }} 
             to={`/project/${props.slug}`}>
-            <div className='overlay'></div>
+            <div className='bg-overlay'></div>
+            <div className='hover-overlay'>
+                <div><p>View</p></div>
+            </div>
             <div className="content">
-                <div>
+                <div className='hidden'>
                     <img className="platform-logo" src={props.platform}></img>
                     <h3>{props.title}</h3>
-                </div>
-                <div className='hidden'>
-                    <p>{props.excerpt}</p>
-                    <span>View</span>
                 </div>
             </div>
         </Link>

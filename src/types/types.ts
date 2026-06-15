@@ -9,8 +9,9 @@ export interface Project {
     images?: string[];
     roles?: string[];
     tech?: string[];
-    content?:  {
+    content?: {
         type: string;
         text: string;
-    }
+    }[]
+
 }

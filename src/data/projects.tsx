@@ -26,11 +26,16 @@ const projects: Project[] = [
             figmaLogo,
             wordpressLogo
         ],
-        content: 
+        content: [
             {
                 type:"heading",
                 text:"This is a heading"
+            },
+            {
+                type:"body",
+                text:"This is a p tag"
             }
+        ]
         
     },
     {
@@ -67,13 +72,6 @@ const projects: Project[] = [
         title:"Green World Spa Products",
         excerpt:"This is a brief description",
         url:"https://greenworldspaproducts.co.uk/"
-    },
-    {
-        slug:"westby-group-ltd",
-        platform:wordpressLogo,
-        title:"Westby Group Ltd",
-        excerpt:"This is a brief description",
-        url:"https://westbygroup.madmdev.co.uk/"
     },
     {
         slug:"mind-balance-center",
